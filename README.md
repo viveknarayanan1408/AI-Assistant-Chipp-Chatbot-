@@ -19,6 +19,44 @@ The assistant was designed to:
 
 ---
 
+## 🏗️ Architecture
+
+This system follows a prompt-driven RAG (Retrieval-Augmented Generation) architecture, implemented without custom backend code.
+
+        ┌───────────────┐
+        │     User      │
+        └──────┬────────┘
+               │
+               ▼
+     ┌────────────────────┐
+     │   Chat Interface   │
+     └────────┬───────────┘
+              │
+              ▼
+     ┌────────────────────┐
+     │   System Prompt    │
+     │ (Behavior Control) │
+     └────────┬───────────┘
+              │
+              ▼
+     ┌────────────────────┐
+     │   Retrieval Layer  │
+     │ (Website Content)  │
+     └────────┬───────────┘
+              │
+              ▼
+     ┌────────────────────┐
+     │     AI Model       │
+     │ (Response Gen)     │
+     └────────┬───────────┘
+              │
+              ▼
+        ┌───────────────┐
+        │   Response    │
+        └───────────────┘
+
+---
+
 ## 🧠 Key Concept
 
 Instead of traditional coding, this chatbot was built using:
@@ -93,6 +131,10 @@ The core of this project is the system prompt, which defines:
 ## 📸 Screenshots
 
 <img width="1920" height="1032" alt="AI Chatbot_fecher" src="https://github.com/user-attachments/assets/d3333103-1240-414e-955a-50465127519d" />
+
+
+
+To find out the chat structure, check out the video in `/screenshots/example-conversation.mp4`
 
 
 ---
