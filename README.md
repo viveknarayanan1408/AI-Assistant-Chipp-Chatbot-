@@ -1,3 +1,11 @@
+![Status](https://img.shields.io/badge/status-prototype-orange)
+![Built With](https://img.shields.io/badge/built%20with-Chipp-blue)
+![Type](https://img.shields.io/badge/type-AI%20Chatbot-purple)
+![Approach](https://img.shields.io/badge/approach-Prompt%20Engineering-green)
+![Architecture](https://img.shields.io/badge/architecture-RAG-lightgrey)
+![Use Case](https://img.shields.io/badge/use%20case-B2B%20Automation-black)
+
+
 # 🤖 Fecher AI Assistant (Chipp Chatbot)
 
 An AI-powered business assistant created using **Chipp** to represent *fecher GmbH*, providing automated answers based on the company website content and structured prompt design.
