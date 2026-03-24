@@ -6,199 +6,217 @@
 ![Use Case](https://img.shields.io/badge/use%20case-B2B%20Automation-black)
 
 
-# 🤖 Fecher AI Assistant (Chipp Chatbot)
+![Status](https://img.shields.io/badge/status-prototype-orange)
+![Built With](https://img.shields.io/badge/built%20with-Chipp-blue)
+![Type](https://img.shields.io/badge/type-AI%20Chatbot-purple)
+![Approach](https://img.shields.io/badge/approach-Prompt%20Engineering-green)
+![Architecture](https://img.shields.io/badge/architecture-RAG-lightgrey)
+![Use Case](https://img.shields.io/badge/use%20case-B2B%20Automation-black)
 
-An AI-powered business assistant created using **Chipp** to represent *fecher GmbH*, providing automated answers based on the company website content and structured prompt design.
+# 🤖 Fecher AI Assistant
 
-🔗 **Live Chatbot:** https://faqbot-10037556.chipp.ai
+> A **prompt-engineered, retrieval-augmented AI assistant** designed to represent a real company (*fecher GmbH*) — built entirely without backend code.
+
+🔗 **Live Demo:** https://faqbot-10037556.chipp.ai
 
 ---
 
-## 🚀 Overview
+## 🚀 What This Project Shows
 
-This project demonstrates how a **no-code AI platform** can be used to build a professional, domain-specific chatbot for a real company.
+This is not just a chatbot.
 
-The assistant was designed to:
+It demonstrates how to:
 
-* Answer questions about fecher GmbH
-* Explain services like **Application Modernization**
-* Present the **hunter recruitment software**
-* Guide potential clients toward contact channels
+* Design **AI systems using prompt engineering**
+* Build **domain-specific assistants grounded in real data**
+* Apply **RAG (Retrieval-Augmented Generation)** without custom infrastructure
+* Translate **business requirements → AI behavior**
 
 ---
 
 ## 🏗️ Architecture
 
-This system follows a prompt-driven RAG (Retrieval-Augmented Generation) architecture, implemented without custom backend code.
+This system follows a **prompt-driven RAG architecture**, implemented without custom backend code.
 
-        ┌───────────────┐
-        │     User      │
-        └──────┬────────┘
-               │
-               ▼
-     ┌────────────────────┐
-     │   Chat Interface   │
-     └────────┬───────────┘
-              │
-              ▼
-     ┌────────────────────┐
-     │   System Prompt    │
-     │ (Behavior Control) │
-     └────────┬───────────┘
-              │
-              ▼
-     ┌────────────────────┐
-     │   Retrieval Layer  │
-     │ (Website Content)  │
-     └────────┬───────────┘
-              │
-              ▼
-     ┌────────────────────┐
-     │     AI Model       │
-     │ (Response Gen)     │
-     └────────┬───────────┘
-              │
-              ▼
-        ┌───────────────┐
-        │   Response    │
-        └───────────────┘
+```
+User
+ │
+ ▼
+Chat Interface (Chipp UI)
+ │
+ ▼
+System Prompt Layer
+ - Role definition
+ - Constraints
+ - Tone & style
+ │
+ ▼
+Retrieval Layer
+ - Knowledge Base (fecher.de)
+ - URL Retrieval
+ - Web Search (optional)
+ │
+ ▼
+AI Model (LLM)
+ - Context + Prompt + Query
+ │
+ ▼
+Response Generation
+ │
+ ▼
+User Output
+```
 
 ---
 
-## 🧠 Key Concept
+## 🧠 Core Idea
 
-Instead of traditional coding, this chatbot was built using:
+Instead of building a traditional backend, this system uses:
 
-* Prompt engineering
-* Structured system instructions
-* Website-based knowledge grounding
+* **Prompt engineering as the control layer**
+* **Website content as the knowledge base**
+* **Tool-assisted retrieval for grounding**
 
-This project highlights how powerful AI systems can be created **without writing backend code**.
+👉 Result: A fully functional AI assistant with **zero custom backend code**
 
 ---
 
-## 🏗️ How It Works
+## 🎯 Use Case
 
-1. The company website (fecher.de) is used as the knowledge source
-2. A structured system prompt defines behavior, tone, and constraints
-3. The chatbot uses:
+The assistant acts as a **digital B2B representative** for fecher GmbH:
+
+* Explains **Application Modernization** services
+* Presents the **hunter recruitment software**
+* Answers company-related questions
+* Guides users toward **contact and conversion points**
+
+---
+
+## ⚙️ How It Works
+
+1. The company website (`fecher.de`) is used as the knowledge source
+2. A structured system prompt defines:
+
+   * Behavior
+   * Tone
+   * Constraints
+3. The system retrieves relevant information via:
 
    * Knowledge base (primary)
-   * Web browsing (secondary)
-4. Responses are generated based on:
+   * Web search (secondary)
+4. The AI generates responses using:
 
-   * Context + prompt instructions + retrieved content
+   * Query + Context + Prompt
 
 ---
 
-## ✍️ System Prompt Design
+## ✍️ Prompt Engineering (Core of the System)
 
-The core of this project is the system prompt, which defines:
+The system prompt defines:
 
-* Role: AI assistant for fecher GmbH
-* Business focus:
+* **Role:** AI assistant for fecher GmbH
+* **Business domains:**
 
   * Application Modernization
   * Recruitment software (**hunter**)
-* Communication style: B2B, professional
-* Constraints:
+* **Communication style:** Professional, B2B
+* **Constraints:**
 
   * No pricing
   * No hallucinated services
   * Knowledge base priority
 
-👉 See full prompt here:
+👉 Full prompt:
 `/chatbot-config/system-prompt.md`
 
 ---
 
-## 💡 Features
+## 💡 Key Features
 
-* 🌐 Website-aware responses
-* 💬 Structured, professional answers
+* 🌐 Website-grounded responses
+* 💬 Structured, business-friendly answers
 * 🎯 Lead qualification & redirection
-* 🧭 Clear separation of business areas
-* ⚙️ Tool usage strategy (KB + web search)
+* 🧭 Clear separation of service domains
+* ⚙️ Controlled AI behavior via prompt constraints
 
 ---
 
 ## 🧪 Example Interaction
 
 **User:**
-"What services does fecher provide?"
+“What services does fecher provide?”
 
-**Bot:**
+**Assistant:**
 
 * Application Modernization (legacy → .NET)
-* Web-enabling software
+* Web-enabling existing systems
 * Database migration
 * Recruitment solution: **hunter**
 
 ---
 
-## 📸 Screenshots
+## 📸 Demo
 
 <img width="1920" height="1032" alt="AI Chatbot_fecher" src="https://github.com/user-attachments/assets/d3333103-1240-414e-955a-50465127519d" />
 
-
-
-To find out the chat structure, check out the video in `/screenshots/example-conversation.mp4`
-
+🎥 See full interaction flow:
+`/docs/screenshots/example-conversation.mp4`
 
 ---
 
 ## ⚠️ Limitations
 
-* No custom backend logic (platform-based)
-* Dependent on Chipp infrastructure
-* Limited control over the retrieval pipeline
+* Platform-dependent (Chipp)
+* No custom backend or fine-tuning
+* Limited control over retrieval internals
 
 ---
 
 ## 🛠️ Tech Stack
 
-* [Chipp Platform](https://chipp.ai?utm_source=chatgpt.com) (No-code AI builder)
+* No-code AI platform: [Chipp](https://chipp.ai?utm_source=chatgpt.com)
 * Prompt Engineering
-* Web-based knowledge retrieval
+* Retrieval-Augmented Generation (RAG principles)
 
 ---
 
-## 📌 Learnings
+## 📌 Key Learnings
 
-This project demonstrates:
-
-* How to design structured AI prompts for real businesses
-* How to control hallucinations using constraints
-* How to guide AI behavior using tool strategies
-* How to build usable AI products without coding
+* Designing **AI behavior through structured prompts**
+* Preventing hallucinations using **constraints + grounding**
+* Building **usable AI systems without coding infrastructure**
+* Translating **business needs into AI workflows**
 
 ---
 
 ## 🔮 Future Improvements
 
-* Export to custom RAG pipeline (LangChain / OpenAI)
+* Rebuild as a custom RAG pipeline (LangChain / OpenAI)
 * Add analytics & user tracking
 * Improve UI customization
-* Deploy as an embedded website widget
+* Deploy as embeddable widget
 
 ---
 
 ## 📄 Disclaimer
 
-This chatbot was created as a prototype and was not deployed in production.
+This project is a prototype and was not deployed in production.
 
 ---
 
-## 🙌 Author
+## 👨‍💻 Author
 
-Developed by Vivek Narayanan
+**Vivek Narayanan**
 
 ---
 
-## ⭐ Why This Project Matters
+## ⭐ Why This Project Stands Out
 
-This is not just a chatbot — it demonstrates:
+This project demonstrates:
 
-* AI system design thinking
-* Prompt engineering expertise
-* Business-oriented AI application
+* AI system design (not just usage)
+* Prompt engineering as a control mechanism
+* Real-world business application of AI
+* Understanding of modern architectures like **RAG**
+
+---
